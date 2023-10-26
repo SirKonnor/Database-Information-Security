@@ -1,0 +1,151 @@
+body {
+background-image: url(img/fon.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-family: Arial, sans-serif;
+font-size: 14px;
+}
+
+a {
+  color: inherit;
+  position: relative;
+	color: black; /*задаём цвет ссылки*/
+	cursor: pointer;
+	line-height: 1; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+
+}
+a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #00a650; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+a:hover:after,
+a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+#header {
+background: #F5DEB3;
+font-family: 'Playfair Display SC', serif;
+float: center;
+padding-top: 20px;
+width: 100%;
+height:80px;
+}
+
+.logo {
+	float: left;
+	padding-left: 30px;
+}
+
+#container {
+background: gray;
+opacity: 0.8;
+margin: auto auto;
+text-align: center;
+width: 50%;
+height: 570px;
+position: relative;
+}
+
+#navigation {
+background: #FE9798;
+width: 100%;
+height:65px;
+}
+
+.glav {
+padding-right: 650px;
+padding-top: 20px;
+}
+
+.dosto {
+position: relative;
+bottom: 43px;
+right: 65px;
+}
+
+.city {
+position: relative;
+bottom: 85px;
+left: 165px;
+}
+
+.help {
+position: relative;
+bottom: 125px;
+left: 320px;
+}
+
+#sidebar {
+background: #FFEFD5;
+float: left;
+width: 20%;
+height: 350px;
+position: relative;
+top: 20px;
+}
+
+.rus {
+float: center;
+padding-top: 25px;
+}
+
+#content {
+float: right;
+opacity: 0.9;
+width: 80%;
+height: 350px;
+position: relative;
+top: 20px;
+}
+
+.text {
+padding-left: 15px;
+padding-top: 40px;
+color: white;
+opacity: 1;
+}
+
+#video {
+background-color: #FFE4C4;
+width: 50%;
+height: 400px;
+opacity: 0.8;
+position: relative;
+bottom: 18px;
+margin-left: 471px;
+text-align: center;
+}
+
+#clear {
+clear: both;
+}
+
+#footer {
+background: black;
+color: white;
+width: 100%;
+height: 100px;
+position: relative;
+top: 430px;
+}
+
+.text__ {
+text-align: center;
+position: relative;
+top: 50px;
+}
+
+.vk-image {
+  width: 60px; 
+  float: left;
+  padding-left: 50px;
+}
