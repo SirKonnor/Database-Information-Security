@@ -140,3 +140,10 @@ import math
 print(math.pi * r ** 2)
 print(2 * math.pi * r)
 
+Средние значения
+a = float(input())
+b = float(input())
+print((a + b) / 2)
+print((a * b) ** 0.5)
+print((2 * a * b) / (a + b))
+print(((a ** 2 + b ** 2) / 2) ** 0.5)
