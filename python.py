@@ -106,6 +106,15 @@ elif max(len(a), len(b), len(c)) == len(b):
 else:
     print(c)
 
+Арифметические строки
+a = len(input())
+b = len(input())
+c = len(input())
+if a + b + c == (min(a, b, c) + max(a, b, c)) / 2 * 3:
+    print("YES")
+else:
+    print("NO")
+
 Цвет настроения синий
 x = input()
 if 'синий' in x:
@@ -147,3 +156,36 @@ print((a + b) / 2)
 print((a * b) ** 0.5)
 print((2 * a * b) / (a + b))
 print(((a ** 2 + b ** 2) / 2) ** 0.5)
+
+Тригонометрическое выражение
+x = int(input())
+import math
+r = (x * math.pi) / 180
+print(math.sin(r) + math.cos(r) + math.tan(r) ** 2)
+
+Пол и потолок
+x = float(input())
+print(round(x + x))
+
+Квадратное уравнение
+a = float(input())
+b = float(input())
+c = float(input())
+import math
+D = b ** 2 - 4 * a * c
+if D > 0:
+    x1 = (-b + math.sqrt(D)) / (2 * a)
+    x2 = (-b - math.sqrt(D)) / (2 * a)
+    print(x1, x2)
+elif D == 0:
+    x = -b / (2 * a)
+    print(x)
+else:
+    print("Нет корней")
+
+Правильный многоугольник
+n = int(input())
+a = float(input())
+import math
+print((n * a ** 2) / (4 * math.tan(math.pi / n)))
+
