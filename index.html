@@ -1,53 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>St. Petersburg</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="container">
-<div id="header":>
-<div class="logo">
-<img src="img/logo.png" width="70">
-</div>
-<h1>Санкт-Петербург</h1>
-</div>
-<MARQUEE behavior=alternate> Контактные данные: +7 (977) 404 15-68          vlad54790@gmail.com </MARQUEE>
-<div id="navigation">
-<h2 class="glav"><a href="#">Главная</a></h2>
-<h2 class="dosto"><a href="#">Достопримечательности</a></h2>
-<h2 class="city"><a href="#">Города</a></h2>
-<h2 class="help"><a href="#">Помощь</a></h2>
-</div>
 
-<div id="sidebar">
-<h2>Полезная информация</h2>
-<div class="rus">
-      <li class="fio"><a href="https://ru.wikipedia.org/wiki/Санкт-Петербург">Wikipedia</a></li> <br>
-      <li class="years"><a href="https://wikiway.com/russia/sankt-peterburg/">Wikiway</a></li> <br>
-      <li class="hobbi"><a href="https://dzen.ru/a/Xz419YSbeUnumFng?utm_referer=yandex.ru">Dzen</a></li> <br>
-      <li class="rabota"><a href="https://yandex.ru/maps/geo/sankt_peterburg/53152804/">Yandex</a></li>
-    </div>
-</div>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Логотип компании"> <h2>DriveHub Retails</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><button type="button" onclick="redirectToAnotherPage()">Акции</button></li>
+                <li><button type="button" onclick="redirectToAnotherPage()">Бронирование</button></li>
+                <style>
+                    .dropdown {
+                      position: relative;
+                      display: inline-block;
+                    }
+                    
+                    .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color: #f9f9f9;
+                      min-width: 160px;
+                      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                      z-index: 1;
+                    }
+                    
+                    .dropdown:hover .dropdown-content {
+                      display: block;
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <div class="dropdown">
+                      <button class="dropbtn">Личный кабинет</button>
+                      <div class="dropdown-content">
+                        <a href="login.html">Вход</a>
+                        <a href="register.html">Регистрация</a>
+                      </div>
+                    </div>
+            </ul>
+        </nav>
+    </header>
 
-<div id="content">
-<h2>Чем является Санкт-Петербург?</h3>
-<h3 class="text">
-Санкт-Петербург – один из красивейших мегаполисов мира, посмотреть на который приезжают путешественники из разных уголков планеты. Только в 2022 году здесь побывало свыше 8 млн российских и иностранных туристов. Раскинувшийся на побережье Финского залива, в устье реки Невы, Санкт-Петербург является вторым по величине городом России (в статусе самостоятельного субъекта федерации) и одновременно административным центром Ленинградской области и Северо-Западного федерального округа. 
-</h3></h1>
-</div>
+    <section class="trust">
+        <h2>Доверие компании</h2>
+        <p>Здесь информация о доверии компании и ее надежности.</p>
+    </section>
 
-<div id="clear">
-</div>
+    <section class="search-form">
+        <h2>Поиск автомобилей</h2>
+        <form id="searchForm">
+            <label for="car-class">Класс автомобиля:</label>
+            <select id="car-class">
+                <option value="economy">Эконом</option>
+                <option value="premium">Премиум</option>
+            </select>
+            <label for="car-brand">Марка:</label>
+            <input type="text" id="car-brand">
+            <label for="car-model">Модель:</label>
+            <input type="text" id="car-model">
+            <button type="submit" onclick="searchCars()">Найти автомобиль</button>
+        </form>
+    </section>
 
-<div id="footer">
-<h3 class="text__">&copy Разработано компанией - RussianCity.PRO</h3>
-<a href="https://vk.com/pedanticdreamer" class="vk-url"><img src="img/vk.png" alt="" class="vk-image"></a>
-</div>
-</div>
+    <section class="news">
+        <h2>Новости</h2>
+        <div class="news-item">
+            <img src="news1.jpg" width="200" alt="Изображение новости 1">
+            <h3>"Новая модель электромобиля XYZ <br>
+            представлена на автомобильной выставке"</h3>
+            <p> - На прошедшей автомобильной выставке <br>
+                была представлена новая модель электромобиля XYZ,<br>
+                обещающая революционизировать рынок электромобилей.<br>
+                Автомобиль обладает высокой мощностью, большим запасом <br>
+                хода и инновационными технологиями безопасности.</p>
+            <a href="#">Подробнее</a>
+        </div>
+        <div class="news-item">
+            <img src="news2.jpg" width="200" alt="Изображение новости 2">
+            <h3>"Автопроизводитель ABC представил <br>
+                новый кроссовер с инновационной системой автопилота"</h3>
+            <p> - Автопроизводитель ABC анонсировал выпуск нового кроссовера,<br>
+                оснащенного передовой системой автопилота, позволяющей автомобилю<br>
+                самостоятельно управляться на дороге. Этот шаг открывает новую эру<br>
+                в автомобильной индустрии и обещает улучшить безопасность и комфорт вождения.</p>
+            <a href="#">Подробнее</a>
+        </div>
+    </section>
 
-<div id="video">
-<h2>Полезная информация</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kURVR-27Ueg?si=y5asXTthmUzGrwiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+    <footer>
+        <div class="contact-info">
+            <p>Телефон: 8 (800) 111-11-11</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

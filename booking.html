@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница бронирования</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Форма бронирования</h1>
+
+    <div class="car-form">
+        <h2>Данные авто</h2>
+        <form id="carBookingForm">
+            <label for="carId">Идентификатор машины:</label>
+            <input type="text" id="carId">
+            <label for="carBrand">Марка авто:</label>
+            <input type="text" id="carBrand">
+
+            <h2>Данные о клиенте</h2>
+            <label for="firstName">Имя:</label>
+            <input type="text" id="firstName">
+            <label for="lastName">Фамилия:</label>
+            <input type="text" id="lastName">
+
+            <input type="checkbox" id="multipleCars">
+            <label for="multipleCars">Бронирование нескольких машин</label>
+
+            <label for="selectedCard">Выбор банковской карты:</label>
+            <select id="selectedCard">
+                <option value="card1">**** **** **** 1234</option>
+                <option value="card2">**** **** **** 5678</option>
+            </select>
+
+            <div>
+                <p>Дата бронирования: <span id="bookingDate"></span></p>
+                <p>Дата возврата: <span id="returnDate"></span></p>
+                <p>Финальная стоимость: <span id="finalPrice">3000</span> руб</p>
+            </div>
+
+            <button type="submit" onclick="bookCar()">Забронировать</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
